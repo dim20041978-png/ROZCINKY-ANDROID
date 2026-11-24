@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
  class ReportLayout {
  final android.graphics.pdf.PdfDocument pdf=new android.graphics.pdf.PdfDocument();final android.graphics.Paint p=new android.graphics.Paint(3);android.graphics.pdf.PdfDocument.Page page;int y,number;final String title,date;
  ReportLayout(String t){title=t;date=new java.text.SimpleDateFormat("dd.MM.yyyy HH:mm",Locale.ROOT).format(new Date());next();}
- void text(String value,float x,float baseline,int size,int color,boolean bold){p.setColor(color);p.setTextSize(size);p.setTypeface(android.graphics.Typeface.create("sans-serif",bold?1:0));page.getCanvas().drawText(value,x,baseline,p);}
+ void text(String value,float x,float baseline,int size,int color,boolean bold){p.setColor(color);p.setTextSize(size);p.setTypeface(android.graphics.Typeface.create("sans-serif",bold?android.graphics.Typeface.BOLD:android.graphics.Typeface.NORMAL));page.getCanvas().drawText(value,x,baseline,p);}
  void rect(int x,int top,int right,int bottom,int color){p.setColor(color);page.getCanvas().drawRect(x,top,right,bottom,p);}
  void next(){if(page!=null)finish();page=pdf.startPage(new android.graphics.pdf.PdfDocument.PageInfo.Builder(595,842,++number).create());rect(32,28,563,92,0xff084b8e);text("РОЗЦІНКИ",44,52,18,Color.WHITE,true);text(title,44,76,13,Color.WHITE,false);text(date,400,52,10,Color.WHITE,false);y=110;}
  void finish(){text("Розцінки 1.0.0",32,818,9,0xff536d84,false);text("Сторінка "+number,490,818,9,0xff536d84,false);pdf.finishPage(page);}
