@@ -1,0 +1,470 @@
+[
+  {
+    "cat": 0,
+    "name": "Штроба бетон 20 мм",
+    "unit": "м",
+    "price": "220",
+    "source": "https://www.rabotniki.ua/uk/146788",
+    "priceType": "пропозиція майстра",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 0,
+    "name": "Штроба цегла 20 мм",
+    "unit": "м",
+    "price": "155",
+    "source": "https://www.rabotniki.ua/uk/146788",
+    "priceType": "пропозиція майстра",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 0,
+    "name": "Ніша щита цегла",
+    "unit": "шт.",
+    "price": "990",
+    "source": "https://www.rabotniki.ua/uk/146788",
+    "priceType": "пропозиція майстра",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 0,
+    "name": "Ніша щита бетон",
+    "unit": "шт.",
+    "price": "1700",
+    "source": "https://www.rabotniki.ua/uk/146788",
+    "priceType": "пропозиція майстра",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 0,
+    "name": "Монтаж щита",
+    "unit": "шт.",
+    "price": "750",
+    "source": "https://www.rabotniki.ua/uk/146788",
+    "priceType": "пропозиція майстра",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 0,
+    "name": "Підключення лічильника",
+    "unit": "шт.",
+    "price": "700",
+    "source": "https://www.rabotniki.ua/uk/146788",
+    "priceType": "пропозиція майстра",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 0,
+    "name": "Однофазний автомат",
+    "unit": "шт.",
+    "price": "220",
+    "source": "https://www.rabotniki.ua/uk/146788",
+    "priceType": "пропозиція майстра",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 0,
+    "name": "Монтаж ПЗВ",
+    "unit": "шт.",
+    "price": "350",
+    "source": "https://www.rabotniki.ua/uk/146788",
+    "priceType": "пропозиція майстра",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 0,
+    "name": "Кабель відкрито",
+    "unit": "м",
+    "price": "27",
+    "source": "https://budver.com/masters/elektromontazhni-roboti/kriviy-rig",
+    "priceType": "від",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 0,
+    "name": "Кабель у штробі",
+    "unit": "м",
+    "price": "27",
+    "source": "https://budver.com/masters/elektromontazhni-roboti/kriviy-rig",
+    "priceType": "від",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 0,
+    "name": "Кабель у гофрі",
+    "unit": "м",
+    "price": "38",
+    "source": "https://budver.com/masters/elektromontazhni-roboti/kriviy-rig",
+    "priceType": "від",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 0,
+    "name": "Монтаж розетки",
+    "unit": "шт.",
+    "price": "99",
+    "source": "https://budver.com/masters/elektromontazhni-roboti/kriviy-rig",
+    "priceType": "від",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 0,
+    "name": "Монтаж люстри",
+    "unit": "шт.",
+    "price": "407",
+    "source": "https://budver.com/masters/elektromontazhni-roboti/kriviy-rig",
+    "priceType": "від",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 0,
+    "name": "Монтаж бра",
+    "unit": "шт.",
+    "price": "220",
+    "source": "https://budver.com/masters/elektromontazhni-roboti/kriviy-rig",
+    "priceType": "від",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 0,
+    "name": "Реле напруги",
+    "unit": "шт.",
+    "price": "330",
+    "source": "https://budver.com/masters/elektromontazhni-roboti/kriviy-rig",
+    "priceType": "від",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 0,
+    "name": "Контур заземлення",
+    "unit": "компл.",
+    "price": "5280",
+    "source": "https://budver.com/masters/elektromontazhni-roboti/kriviy-rig",
+    "priceType": "від",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 0,
+    "name": "Підрозетник бетон",
+    "unit": "шт.",
+    "price": "187",
+    "source": "https://budver.com/masters/elektromontazhni-roboti/kriviy-rig",
+    "priceType": "від",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 0,
+    "name": "Підрозетник цегла",
+    "unit": "шт.",
+    "price": "132",
+    "source": "https://budver.com/masters/elektromontazhni-roboti/kriviy-rig",
+    "priceType": "від",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 0,
+    "name": "LED стрічка",
+    "unit": "м",
+    "price": "187",
+    "source": "https://budver.com/masters/elektromontazhni-roboti/kriviy-rig",
+    "priceType": "від",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 0,
+    "name": "Кабельний короб",
+    "unit": "м",
+    "price": "44",
+    "source": "https://budver.com/masters/elektromontazhni-roboti/kriviy-rig",
+    "priceType": "від",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 0,
+    "name": "Демонтаж розетки",
+    "unit": "шт.",
+    "price": "38",
+    "source": "https://budver.com/masters/elektromontazhni-roboti/kriviy-rig",
+    "priceType": "від",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 0,
+    "name": "Монтаж інвертора",
+    "unit": "шт.",
+    "price": "",
+    "source": "",
+    "priceType": "договірна",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 0,
+    "name": "Монтаж АКБ",
+    "unit": "шт.",
+    "price": "",
+    "source": "",
+    "priceType": "договірна",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 0,
+    "name": "Тепловізійне обстеження щита",
+    "unit": "шт.",
+    "price": "",
+    "source": "",
+    "priceType": "договірна",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 1,
+    "name": "Труба PPR 16–40",
+    "unit": "м",
+    "price": "83",
+    "source": "https://www.rabotniki.ua/uk/santehnicheskie-raboty/krivoy-rog",
+    "priceType": "середня",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 1,
+    "name": "Труба PPR 55–63",
+    "unit": "м",
+    "price": "196",
+    "source": "https://www.rabotniki.ua/uk/santehnicheskie-raboty/krivoy-rog",
+    "priceType": "середня",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 1,
+    "name": "Мідна труба",
+    "unit": "м",
+    "price": "285",
+    "source": "https://www.rabotniki.ua/uk/santehnicheskie-raboty/krivoy-rog",
+    "priceType": "середня",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 1,
+    "name": "Металопластик 16–40",
+    "unit": "м",
+    "price": "76",
+    "source": "https://www.rabotniki.ua/uk/santehnicheskie-raboty/krivoy-rog",
+    "priceType": "середня",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 1,
+    "name": "Врізка у стояк",
+    "unit": "шт.",
+    "price": "978",
+    "source": "https://www.rabotniki.ua/uk/santehnicheskie-raboty/krivoy-rog",
+    "priceType": "середня",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 1,
+    "name": "Ізоляція труби",
+    "unit": "м",
+    "price": "47",
+    "source": "https://www.rabotniki.ua/uk/santehnicheskie-raboty/krivoy-rog",
+    "priceType": "середня",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 1,
+    "name": "Каналізація 50",
+    "unit": "м",
+    "price": "158",
+    "source": "https://www.rabotniki.ua/uk/santehnicheskie-raboty/krivoy-rog",
+    "priceType": "середня",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 1,
+    "name": "Каналізація 110",
+    "unit": "м",
+    "price": "183",
+    "source": "https://www.rabotniki.ua/uk/santehnicheskie-raboty/krivoy-rog",
+    "priceType": "середня",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 1,
+    "name": "Монтаж ванни",
+    "unit": "шт.",
+    "price": "3167",
+    "source": "https://www.rabotniki.ua/uk/santehnicheskie-raboty/krivoy-rog",
+    "priceType": "середня",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 1,
+    "name": "Монтаж унітаза",
+    "unit": "шт.",
+    "price": "1650",
+    "source": "https://www.rabotniki.ua/uk/santehnicheskie-raboty/krivoy-rog",
+    "priceType": "середня",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 1,
+    "name": "Монтаж умивальника",
+    "unit": "шт.",
+    "price": "1217",
+    "source": "https://www.rabotniki.ua/uk/santehnicheskie-raboty/krivoy-rog",
+    "priceType": "середня",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 1,
+    "name": "Монтаж змішувача",
+    "unit": "шт.",
+    "price": "683",
+    "source": "https://www.rabotniki.ua/uk/santehnicheskie-raboty/krivoy-rog",
+    "priceType": "середня",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 1,
+    "name": "Монтаж бойлера",
+    "unit": "шт.",
+    "price": "2217",
+    "source": "https://www.rabotniki.ua/uk/santehnicheskie-raboty/krivoy-rog",
+    "priceType": "середня",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 1,
+    "name": "Лічильник води",
+    "unit": "шт.",
+    "price": "930",
+    "source": "https://www.rabotniki.ua/uk/santehnicheskie-raboty/krivoy-rog",
+    "priceType": "середня",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 1,
+    "name": "Точка холодної води",
+    "unit": "шт.",
+    "price": "670",
+    "source": "https://www.rabotniki.ua/uk/santehnicheskie-raboty/krivoy-rog",
+    "priceType": "середня",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 1,
+    "name": "Точка гарячої води",
+    "unit": "шт.",
+    "price": "670",
+    "source": "https://www.rabotniki.ua/uk/santehnicheskie-raboty/krivoy-rog",
+    "priceType": "середня",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 1,
+    "name": "Точка каналізації",
+    "unit": "шт.",
+    "price": "787",
+    "source": "https://www.rabotniki.ua/uk/santehnicheskie-raboty/krivoy-rog",
+    "priceType": "середня",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 1,
+    "name": "Монтаж колектора",
+    "unit": "шт.",
+    "price": "2663",
+    "source": "https://www.rabotniki.ua/uk/santehnicheskie-raboty/krivoy-rog",
+    "priceType": "середня",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 1,
+    "name": "Гідроакумулятор",
+    "unit": "шт.",
+    "price": "1167",
+    "source": "https://www.rabotniki.ua/uk/santehnicheskie-raboty/krivoy-rog",
+    "priceType": "середня",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 1,
+    "name": "Монтаж сифона",
+    "unit": "шт.",
+    "price": "553",
+    "source": "https://www.rabotniki.ua/uk/santehnicheskie-raboty/krivoy-rog",
+    "priceType": "середня",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 1,
+    "name": "Монтаж інсталяції",
+    "unit": "шт.",
+    "price": "2133",
+    "source": "https://www.rabotniki.ua/uk/santehnicheskie-raboty/krivoy-rog",
+    "priceType": "середня",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 1,
+    "name": "Монтаж трапа",
+    "unit": "шт.",
+    "price": "1633",
+    "source": "https://www.rabotniki.ua/uk/santehnicheskie-raboty/krivoy-rog",
+    "priceType": "середня",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 1,
+    "name": "Редуктор тиску",
+    "unit": "шт.",
+    "price": "903",
+    "source": "https://www.rabotniki.ua/uk/santehnicheskie-raboty/krivoy-rog",
+    "priceType": "середня",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 1,
+    "name": "Монтаж крана",
+    "unit": "шт.",
+    "price": "383",
+    "source": "https://www.rabotniki.ua/uk/santehnicheskie-raboty/krivoy-rog",
+    "priceType": "середня",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 1,
+    "name": "Монтаж душової кабіни",
+    "unit": "шт.",
+    "price": "4483",
+    "source": "https://www.rabotniki.ua/uk/santehnicheskie-raboty/krivoy-rog",
+    "priceType": "середня",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 1,
+    "name": "Монтаж радіатора",
+    "unit": "шт.",
+    "price": "",
+    "source": "",
+    "priceType": "договірна",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 1,
+    "name": "Тепла підлога водяна",
+    "unit": "м²",
+    "price": "",
+    "source": "",
+    "priceType": "договірна",
+    "checked": "2026-11-24"
+  },
+  {
+    "cat": 1,
+    "name": "Опресування системи",
+    "unit": "компл.",
+    "price": "",
+    "source": "",
+    "priceType": "договірна",
+    "checked": "2026-11-24"
+  }
+]
