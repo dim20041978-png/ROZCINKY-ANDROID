@@ -1,0 +1,1 @@
+<resources><style name="RozcinkyDialog" parent="android:style/Theme.Material.Light.Dialog.Alert"><item name="android:colorAccent">#126AC0</item><item name="android:textColorPrimary">#102B46</item><item name="android:textColorSecondary">#536D84</item></style></resources>
