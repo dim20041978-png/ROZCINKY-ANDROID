@@ -38,6 +38,7 @@ jobs:
               with zipfile.ZipFile(apk) as z:
                   actual = {n[len(prefix):] for n in z.namelist() if n.startswith(prefix+"jobs_") and n.endswith(".jpg")}
                   assert expected <= actual, expected-actual
+                  assert len(credits := json.loads(z.read(prefix+"photo_credits.json"))) == len(expected), "Duplicate or missing credits"
                   credits = json.loads(z.read(prefix+"photo_credits.json"))
                   assert {c["asset"] for c in credits} == expected
                   for c in credits:
