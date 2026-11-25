@@ -49,6 +49,16 @@ jobs:
                   print("Verified", len(expected), "photos in", apk)
           assert list(pathlib.Path("app/build/outputs/apk/debug").glob("*.apk")), "APK missing"
           PY
+      - name: Verify APK manifest and launcher icon
+        run: |
+          set -eu
+          for apk in app/build/outputs/apk/debug/*.apk; do
+            "$ANDROID_HOME/build-tools/35.0.0/aapt" dump badging "$apk" > /tmp/roz-badging.txt
+            cat /tmp/roz-badging.txt
+            grep -F "versionName='1.0.0'" /tmp/roz-badging.txt
+            grep -E "^application-icon-[0-9]+:" /tmp/roz-badging.txt
+            "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --print-certs "$apk"
+          done
       - uses: actions/upload-artifact@v4
         with:
           name: ROZCINKY-1.0.0-debug
