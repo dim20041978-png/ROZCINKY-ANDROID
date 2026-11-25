@@ -25,6 +25,9 @@ jobs:
           python -m pip install Pillow
           python scripts/import_photos.py
       - run: gradle assembleDebug lintDebug
+      - name: Verify bundled photos in APK
+        run: |
+          python -c 'import glob,zipfile; p=glob.glob("app/build/outputs/apk/debug/*.apk")[0]; z=zipfile.ZipFile(p); assert len([n for n in z.namelist() if n.startswith("assets/graphics/jobs_") and n.endswith(".jpg")]) == 14; assert "assets/graphics/photo_credits.json" in z.namelist()'
       - uses: actions/upload-artifact@v4
         with:
           name: ROZCINKY-1.0.0-debug
