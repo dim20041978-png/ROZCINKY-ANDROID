@@ -25,6 +25,29 @@ jobs:
           python -m pip install Pillow
           python scripts/import_photos.py
       - run: gradle assembleDebug lintDebug
+      - name: Verify APK photos and attribution against importer manifest
+        run: |
+          python - <<'PY'
+          import ast, pathlib, zipfile, json, io
+          from PIL import Image
+          tree = ast.parse(pathlib.Path("scripts/import_photos.py").read_text())
+          files = next(ast.literal_eval(n.value) for n in tree.body if isinstance(n, ast.Assign) and any(isinstance(t, ast.Name) and t.id == "FILES" for t in n.targets))
+          expected = {"jobs_"+k+".jpg" for k in files}
+          prefix = "assets/graphics/"
+          for apk in pathlib.Path("app/build/outputs/apk/debug").glob("*.apk"):
+              with zipfile.ZipFile(apk) as z:
+                  actual = {n[len(prefix):] for n in z.namelist() if n.startswith(prefix+"jobs_") and n.endswith(".jpg")}
+                  assert expected <= actual, expected-actual
+                  credits = json.loads(z.read(prefix+"photo_credits.json"))
+                  assert {c["asset"] for c in credits} == expected
+                  for c in credits:
+                      assert all(c.get(k) for k in ("author","license","license_url","source"))
+                      with Image.open(io.BytesIO(z.read(prefix+c["asset"]))) as im:
+                          assert im.format == "JPEG" and max(im.size) <= 320
+                          im.verify()
+                  print("Verified", len(expected), "photos in", apk)
+          assert list(pathlib.Path("app/build/outputs/apk/debug").glob("*.apk")), "APK missing"
+          PY
       - uses: actions/upload-artifact@v4
         with:
           name: ROZCINKY-1.0.0-debug
