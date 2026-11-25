@@ -6,6 +6,8 @@ from PIL import Image, ImageOps
 
 ROOT = Path("app/src/main/assets/graphics")
 FILES = {
+ "breaker": "Miniature circuit breaker.png",
+ "socket_box": "Electrical box01.jpg",
  "electric_meter": "Electric meter and the circuit breaker.JPG",
  "chase_brick": "Clay block ( proton porotherm ) wall with chases.jpg",
  "rcd": "ResidualCurrentCircuitBreak.jpg",
