@@ -44,8 +44,15 @@ for key, filename in FILES.items():
     if not (match or zero) or not valid_url or not artist:
         raise RuntimeError(f"Unverified metadata: {filename}; license={license_name!r}; url={license_url!r}; author={artist!r}")
     if info["mime"] not in ("image/jpeg","image/png"): raise RuntimeError("Not a raster photo: "+filename)
-    url = info.get("thumburl", info["url"])
-    if not url.startswith("https://upload.wikimedia.org/"): raise RuntimeError("Unexpected host")
+    url = None
+    for candidate in (info.get("thumburl"), info.get("url")):
+        if not candidate: continue
+        parts = urlsplit(candidate if not candidate.startswith("//") else "https:"+candidate)
+        if parts.scheme in ("http", "https") and parts.hostname == "upload.wikimedia.org" and not parts.username and not parts.password and parts.port in (None, 443, 80):
+            url = parts._replace(scheme="https", netloc="upload.wikimedia.org").geturl()
+            break
+    if url is None:
+        raise RuntimeError(f"Unexpected image host for {filename}: thumb={info.get('thumburl')!r}, original={info.get('url')!r}")
     image = ImageOps.exif_transpose(Image.open(io.BytesIO(get(url)))).convert("RGB")
     image.thumbnail((320,320))
     image.save(ROOT / ("jobs_"+key+".jpg"), quality=85)
