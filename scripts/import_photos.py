@@ -40,7 +40,7 @@ for key, filename in FILES.items():
     match = re.fullmatch(r"CC (BY(?:-SA)?) ([1-4][.]0)", license_name)
     zero = license_name in ("CC0", "CC0 1.0", "CC 0", "CC 0 1.0")
     expected = ("/licenses/"+match.group(1).lower()+"/"+match.group(2)+"/") if match else "/publicdomain/zero/1.0/"
-    valid_url = license_parts.scheme in ("http","https") and license_parts.hostname == "creativecommons.org" and license_parts.path.rstrip("/") == expected.rstrip("/")
+    valid_url = license_parts.scheme in ("http","https") and license_parts.hostname == "creativecommons.org" and re.fullmatch(re.escape(expected.rstrip("/")) + r"(?:/(?:deed|legalcode)(?:[.][a-zA-Z0-9-]+)?)?/?", license_parts.path) is not None
     if not (match or zero) or not valid_url or not artist:
         raise RuntimeError(f"Unverified metadata: {filename}; license={license_name!r}; url={license_url!r}; author={artist!r}")
     if info["mime"] not in ("image/jpeg","image/png"): raise RuntimeError("Not a raster photo: "+filename)
