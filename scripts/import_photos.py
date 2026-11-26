@@ -36,6 +36,8 @@ for key, filename in FILES.items():
     params = dict(action="query", format="json", titles="File:"+filename, redirects=1, prop="imageinfo", iiprop="url|mime|extmetadata", iiurlwidth=320)
     pages = json.loads(get("https://commons.wikimedia.org/w/api.php?"+urlencode(params)))["query"]["pages"]
     page = next(iter(pages.values()))
+    if "missing" in page or not page.get("imageinfo"):
+        raise RuntimeError(f"Commons file missing or has no imageinfo: {filename}")
     info = page["imageinfo"][0]
     meta = info["extmetadata"]
     def val(k): return clean(meta.get(k, {}).get("value", ""))
@@ -62,6 +64,6 @@ for key, filename in FILES.items():
     image.thumbnail((320,320))
     image.save(ROOT / ("jobs_"+key+".jpg"), quality=85)
     credits.append(dict(asset="jobs_"+key+".jpg", title=page["title"], author=artist, license=license_name, license_url=license_url, source=info["descriptionurl"], modifications="Resized and converted to JPEG"))
-    print(key, license_name, flush=True)
+    print(key, page["title"], license_name, artist, info["descriptionurl"], flush=True)
     time.sleep(1)
 (ROOT/"photo_credits.json").write_text(json.dumps(credits, ensure_ascii=False, indent=2), encoding="utf-8")
