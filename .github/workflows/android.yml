@@ -50,14 +50,24 @@ jobs:
           assert list(pathlib.Path("app/build/outputs/apk/debug").glob("*.apk")), "APK missing"
           PY
       - name: Verify APK manifest and launcher icon
+        env:
+          EXPECTED_CERT_SHA256: ${{ vars.ROZCINKY_CERT_SHA256 }}
         run: |
           set -eu
           for apk in app/build/outputs/apk/debug/*.apk; do
             "$ANDROID_HOME/build-tools/35.0.0/aapt" dump badging "$apk" > /tmp/roz-badging.txt
             cat /tmp/roz-badging.txt
+            grep -F "package: name='ua.rozcinky.app'" /tmp/roz-badging.txt
             grep -F "versionName='1.0.0'" /tmp/roz-badging.txt
             grep -E "^application-icon-[0-9]+:" /tmp/roz-badging.txt
-            "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --print-certs "$apk"
+            "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --print-certs "$apk" | tee /tmp/roz-certs.txt
+            actual=$(sed -n 's/^Signer #1 certificate SHA-256 digest: //p' /tmp/roz-certs.txt)
+            test -n "$actual"
+            if [ -n "$EXPECTED_CERT_SHA256" ]; then
+              test "$(echo "$actual" | tr A-F a-f)" = "$(echo "$EXPECTED_CERT_SHA256" | tr A-F a-f | tr -d :)"
+            else
+              echo "::warning::Original certificate fingerprint unavailable; APK is diagnostic only, update compatibility unverified."
+            fi
           done
       - uses: actions/upload-artifact@v4
         with:
